@@ -1,0 +1,16 @@
+#! /bin/bash
+while :
+do
+    echo "please enter the name of file which is your input file list along with the right path of input : "
+    read inputuserFile
+
+    if [ -f $inputuserFile ]
+    then
+        cat $inputuserFile
+        break
+    else
+        echo "There is no such a file. please try it again."
+        printf "enter the name of file: "
+        read inputuserFile
+    fi
+done

@@ -1,0 +1,12 @@
+printf "please select a number between 5-12: "
+
+read user_input;
+
+while [[ $user_input != +([0-9]) ]] || (( user_input < 5 || user_input > 12 )) ;
+do
+    printf "Not accepted, your input isn't between 5-12\n"
+    printf "Try again and give correct input which between 5-12: "
+    read user_input; 
+done 
+
+printf "Okay, that is abselutely right input. Thanks to you for choosing right one!\n"
